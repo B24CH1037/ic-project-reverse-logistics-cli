@@ -20,6 +20,7 @@ int main() {
     int warehouseCount = loadWarehouses(warehouses, "data/warehouses.csv");
 
     // Process CLI menu with the loaded data
+    // test comment 
     processMenu(products, productCount, customers, customerCount, warehouses, warehouseCount);
 
     return 0;
