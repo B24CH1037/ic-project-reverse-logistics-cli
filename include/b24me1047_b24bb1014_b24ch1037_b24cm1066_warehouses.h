@@ -11,11 +11,8 @@ typedef struct {
     float costPerUnit;
 } Warehouse;
 
-// Loads warehouses from a CSV file.
-// Returns the number of records loaded.
 int loadWarehouses(Warehouse warehouses[], const char *filename);
 
-// Displays the list of warehouses.
 void listWarehouses(Warehouse warehouses[], int count);
 
-#endif // WAREHOUSES_H
+#endif 

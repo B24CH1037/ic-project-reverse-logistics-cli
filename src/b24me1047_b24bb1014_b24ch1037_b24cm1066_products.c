@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "products.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_products.h"
 
-int loadProducts(Product products[], const char *filename) {
+int loadProducts(Product products[], const char *filename) 
+{
     FILE *fp = fopen(filename, "r");
     if (!fp) {
         printf("Error opening file: %s\n", filename);
@@ -22,10 +23,11 @@ int loadProducts(Product products[], const char *filename) {
     return count;
 }
 
-void listProducts(Product products[], int count) {
+void listProducts(Product products[], int count) 
+{
     printf("----- Product List -----\n");
     for (int i = 0; i < count; i++) {
-        printf("ID: %d | Name: %s | Category: %s | Price: $%.2f | Stock: %d | Warehouse ID: %d\n",
+        printf("ID: %d | Name: %s | Category: %s | Price: ₹%.2f | Stock: %d | Warehouse ID: %d\n",
                products[i].id, products[i].name, products[i].category,
                products[i].price, products[i].stock, products[i].warehouseId);
     }

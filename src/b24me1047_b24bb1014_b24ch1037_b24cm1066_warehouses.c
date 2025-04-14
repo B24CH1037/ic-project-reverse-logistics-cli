@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "warehouses.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_warehouses.h"
 
-int loadWarehouses(Warehouse warehouses[], const char *filename) {
+int loadWarehouses(Warehouse warehouses[], const char *filename) 
+{
     FILE *fp = fopen(filename, "r");
     if (!fp) {
         printf("Error opening file: %s\n", filename);
@@ -23,10 +24,11 @@ int loadWarehouses(Warehouse warehouses[], const char *filename) {
     return count;
 }
 
-void listWarehouses(Warehouse warehouses[], int count) {
+void listWarehouses(Warehouse warehouses[], int count) 
+{
     printf("----- Warehouse List -----\n");
     for (int i = 0; i < count; i++) {
-        printf("ID: %d | Name: %s | Location: %s | Lat: %.4f | Lon: %.4f | Capacity: %d | Cost/Unit: $%.2f\n",
+        printf("ID: %d | Name: %s | Location: %s | Lat: %.4f | Lon: %.4f | Capacity: %d | Cost/Unit: ₹%.2f\n",
                warehouses[i].id, warehouses[i].name, warehouses[i].location,
                warehouses[i].latitude, warehouses[i].longitude,
                warehouses[i].capacity, warehouses[i].costPerUnit);

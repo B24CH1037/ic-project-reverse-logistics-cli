@@ -7,14 +7,11 @@ typedef struct {
     char category[30];
     float price;
     int stock;
-    int warehouseId;  // Links product to a warehouse
+    int warehouseId;  
 } Product;
 
-// Loads products from a CSV file.
-// Returns the number of records loaded.
 int loadProducts(Product products[], const char *filename);
 
-// Displays the list of products.
 void listProducts(Product products[], int count);
 
-#endif // PRODUCTS_H
+#endif

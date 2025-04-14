@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-#include "cli.h"
-#include "products.h"
-#include "customers.h"
-#include "warehouses.h"
-#include "algorithms.h"
-#include "return_classification.h"
-#include "resale_prediction.h"  // Include new module
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_cli.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_products.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_customers.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_warehouses.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_algorithms.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_return_classification.h"
+#include "b24me1047_b24bb1014_b24ch1037_b24cm1066_resale_prediction.h" 
 
-// Updated menu display with K-means resale prediction option.
 void displayMenu() {
     printf("=======================================\n");
     printf(" Reverse Logistics CLI Interface\n");
@@ -22,32 +21,31 @@ void displayMenu() {
     printf("7. Exit\n");
 }
 
-void processResalePredictionKMeans() {
+void processResalePredictionKMeans() 
+{
     float originalPrice;
     float conditionScore;
     
-    // Prompt for original price.
     printf("Enter the product's original price: ");
     scanf("%f", &originalPrice);
-    getchar(); // Clear newline
+    getchar(); 
 
-    // Prompt for condition score (a numeric value, e.g., 0.0 to 1.0).
     printf("Enter the product's condition score (0.0 to 1.0): ");
     scanf("%f", &conditionScore);
     getchar();
 
-    // Call the K-means based prediction function.
     float resalePrice = predictResalePriceKMeans(originalPrice, conditionScore);
-    printf("Predicted Resale Price using K-means Clustering: $%.2f\n", resalePrice);
+    printf("Predicted Resale Price using K-means Clustering: ₹%.2f\n", resalePrice);
 }
 
-void processMenu(Product products[], int productCount, Customer customers[], int customerCount, Warehouse warehouses[], int warehouseCount) {
+void processMenu(Product products[], int productCount, Customer customers[], int customerCount, Warehouse warehouses[], int warehouseCount) 
+{
     int choice;
     do {
         displayMenu();
         printf("Enter your choice: ");
         scanf("%d", &choice);
-        getchar();  // Clear newline
+        getchar(); 
 
         switch(choice) {
             case 1:
@@ -59,12 +57,28 @@ void processMenu(Product products[], int productCount, Customer customers[], int
             case 3:
                 listWarehouses(warehouses, warehouseCount);
                 break;
+
             case 4: {
-                double lat, lon;
-                printf("Enter product's current latitude: ");
-                scanf("%lf", &lat);
-                printf("Enter product's current longitude: ");
-                scanf("%lf", &lon);
+                int customerId;
+                printf("Enter Customer ID: ");
+                scanf("%d", &customerId);
+
+                int found = 0;
+                double lat = 0.0, lon = 0.0;
+                for (int i = 0; i < customerCount; i++) {
+                    if (customers[i].id == customerId) {
+                        lat = customers[i].latitude;
+                        lon = customers[i].longitude;
+                        found = 1;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    printf("Customer with ID %d not found.\n", customerId);
+                    break;
+                }
+
                 int bestIndex = dijkstraFindBestWarehouse(warehouses, warehouseCount, lat, lon);
                 if (bestIndex != -1) {
                     printf("Best Warehouse using Dijkstra's Algorithm:\n");
@@ -77,6 +91,7 @@ void processMenu(Product products[], int productCount, Customer customers[], int
                 }
                 break;
             }
+
             case 5:
                 processReturnClassification();
                 break;

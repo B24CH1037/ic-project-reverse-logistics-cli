@@ -1,20 +1,20 @@
-1,Warehouse A,New York,40.7128,-74.0060,500,0.50
-2,Warehouse B,Los Angeles,34.0522,-118.2437,300,0.75
-3,Warehouse C,Chicago,41.8781,-87.6298,450,0.65
-4,Warehouse D,Houston,29.7604,-95.3698,400,0.70
-5,Warehouse E,Phoenix,33.4484,-112.0740,350,0.55
-6,Warehouse F,Philadelphia,39.9526,-75.1652,380,0.60
-7,Warehouse G,San Antonio,29.4241,-98.4936,300,0.80
-8,Warehouse H,San Diego,32.7157,-117.1611,320,0.75
-9,Warehouse I,Dallas,32.7767,-96.7970,400,0.70
-10,Warehouse J,San Jose,37.3382,-121.8863,280,0.85
-11,Warehouse K,Austin,30.2672,-97.7431,360,0.65
-12,Warehouse L,Jacksonville,30.3322,-81.6557,330,0.60
-13,Warehouse M,Fort Worth,32.7555,-97.3308,310,0.75
-14,Warehouse N,Columbus,39.9612,-82.9988,290,0.70
-15,Warehouse O,Charlotte,35.2271,-80.8431,340,0.55
-16,Warehouse P,Indianapolis,39.7684,-86.1581,370,0.60
-17,Warehouse Q,San Francisco,37.7749,-122.4194,260,0.90
-18,Warehouse R,Seattle,47.6062,-122.3321,310,0.80
-19,Warehouse S,Denver,39.7392,-104.9903,320,0.65
-20,Warehouse T,Boston,42.3601,-71.0589,300,0.70
+1,Warehouse A,Delhi,28.7041,77.1025,500,0.50
+2,Warehouse B,Mumbai,19.0760,72.8777,300,0.75
+3,Warehouse C,Bangalore,12.9716,77.5946,450,0.65
+4,Warehouse D,Hyderabad,17.3850,78.4867,400,0.70
+5,Warehouse E,Chennai,13.0827,80.2707,350,0.55
+6,Warehouse F,Kolkata,22.5726,88.3639,380,0.60
+7,Warehouse G,Pune,18.5204,73.8567,300,0.80
+8,Warehouse H,Ahmedabad,23.0225,72.5714,320,0.75
+9,Warehouse I,Surat,21.1702,72.8311,400,0.70
+10,Warehouse J,Nagpur,21.1458,79.0882,280,0.85
+11,Warehouse K,Jaipur,26.9124,75.7873,360,0.65
+12,Warehouse L,Lucknow,26.8467,80.9462,330,0.60
+13,Warehouse M,Kochi,9.9312,76.2673,310,0.75
+14,Warehouse N,Coimbatore,11.0168,76.9558,290,0.70
+15,Warehouse O,Visakhapatnam,17.6868,83.2185,340,0.55
+16,Warehouse P,Indore,22.7196,75.8577,370,0.60
+17,Warehouse Q,Gurgaon,28.4595,77.0266,260,0.90
+18,Warehouse R,Noida,28.5355,77.3910,310,0.80
+19,Warehouse S,Bhubaneswar,20.2961,85.8245,320,0.65
+20,Warehouse T,Thane,19.2183,72.9781,300,0.70
